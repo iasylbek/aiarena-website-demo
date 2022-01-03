@@ -9,8 +9,10 @@ import Button from "@mui/material/Button";
 import ResponsiveAppBar from "./components/appbar";
 import QuiltedImageList from "./components/image-list";
 import ContentCards from "./components/content";
+import BottomBar from "./components/bottombar";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import SportsKabaddiIcon from "@mui/icons-material/SportsKabaddi";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
 const theme = createTheme({
   palette: {
@@ -35,10 +37,15 @@ function App() {
         <br />
         <ContentCards />
         <br />
-        <Button variant="contained" startIcon={<SportsKabaddiIcon />}>
+        <Button
+          variant="contained"
+          startIcon={<SportsKabaddiIcon />}
+          endIcon={<PlayArrowIcon />}
+        >
           Start
         </Button>
         <QuiltedImageList />
+        <BottomBar />
       </ThemeProvider>
     </div>
   );

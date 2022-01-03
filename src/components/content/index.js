@@ -6,6 +6,11 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
+import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
+import MotionPhotosAutoIcon from "@mui/icons-material/MotionPhotosAuto";
+import PsychologyIcon from "@mui/icons-material/Psychology";
+import PeopleIcon from '@mui/icons-material/People';
+
 const learnMore = (
   <CardActions
     sx={{
@@ -35,6 +40,7 @@ export default function ContentCards() {
         <Card variant="outlined">
           <CardContent>
             <Typography variant="h5" component="div">
+              <SportsEsportsIcon />
               What is the Game?
             </Typography>
             <Typography variant="body2">
@@ -49,6 +55,7 @@ export default function ContentCards() {
         <Card variant="outlined">
           <CardContent>
             <Typography variant="h5" component="div">
+              <MotionPhotosAutoIcon />
               Autonomous Agents
             </Typography>
             <Typography variant="body2">
@@ -65,6 +72,7 @@ export default function ContentCards() {
         <Card variant="outlined">
           <CardContent>
             <Typography variant="h5" component="div">
+              <PsychologyIcon />
               Coach your AI
             </Typography>
             <Typography variant="body2">
@@ -80,6 +88,7 @@ export default function ContentCards() {
         <Card variant="outlined">
           <CardContent>
             <Typography variant="h5" component="div">
+              <PeopleIcon />
               Collect Fighters
             </Typography>
             <Typography variant="body2">
