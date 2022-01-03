@@ -12,7 +12,9 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 
-const pages = ["Products", "Pricing", "Blog"];
+import logo from "../../assets/game-logo.webp";
+
+const pages = ["Home", "Gameplay", "Training", "Sign Up", "Demo"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const ResponsiveAppBar = () => {
@@ -44,7 +46,13 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            LOGO
+            <Box
+              sx={{
+                width: 50,
+              }}
+            >
+              <img src={logo} alt="Logo" width={"100%"} height={"100%"} />
+            </Box>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
