@@ -36,9 +36,19 @@ const ResponsiveAppBar = () => {
     setAnchorElUser(null);
   };
 
+  const logoBox = (
+    <Box
+      sx={{
+        width: 50,
+      }}
+    >
+      <img src={logo} alt="Logo" width={"100%"} height={"100%"} />
+    </Box>
+  );
+
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      <Container maxWidth="md">
         <Toolbar disableGutters>
           <Typography
             variant="h6"
@@ -46,13 +56,7 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            <Box
-              sx={{
-                width: 50,
-              }}
-            >
-              <img src={logo} alt="Logo" width={"100%"} height={"100%"} />
-            </Box>
+            {logoBox}
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -91,14 +95,13 @@ const ResponsiveAppBar = () => {
               ))}
             </Menu>
           </Box>
-          <Typography
-            variant="h6"
+          <Box
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            LOGO
-          </Typography>
+            {logoBox}
+          </Box>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
@@ -114,7 +117,7 @@ const ResponsiveAppBar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src="https://image.shutterstock.com/image-vector/man-character-face-avatar-glasses-600w-562077406.jpg" />
               </IconButton>
             </Tooltip>
             <Menu

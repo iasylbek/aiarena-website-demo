@@ -22,7 +22,7 @@ export default function QuiltedImageList() {
       }}
     >
       <ImageList
-        sx={{ width: 500, height: 600 }}
+        sx={{ maxWidth: 900, minWidth: 400 }}
         variant="quilted"
         cols={4}
         rowHeight={121}

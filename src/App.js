@@ -8,7 +8,9 @@ import "@fontsource/roboto/700.css";
 import Button from "@mui/material/Button";
 import ResponsiveAppBar from "./components/appbar";
 import QuiltedImageList from "./components/image-list";
+import ContentCards from "./components/content";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import SportsKabaddiIcon from "@mui/icons-material/SportsKabaddi";
 
 const theme = createTheme({
   palette: {
@@ -30,8 +32,13 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <ResponsiveAppBar />
+        <br />
+        <ContentCards />
+        <br />
+        <Button variant="contained" startIcon={<SportsKabaddiIcon />}>
+          Start
+        </Button>
         <QuiltedImageList />
-        <Button variant="contained">Hello World</Button>
       </ThemeProvider>
     </div>
   );
