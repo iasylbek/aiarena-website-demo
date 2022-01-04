@@ -10,9 +10,11 @@ import ResponsiveAppBar from "./components/appbar";
 import QuiltedImageList from "./components/image-list";
 import ContentCards from "./components/content";
 import BottomBar from "./components/bottombar";
+import BasicBreadcrumbs from "./components/breadcrumbs";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import SportsKabaddiIcon from "@mui/icons-material/SportsKabaddi";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import Alert from "@mui/material/Alert";
 
 const theme = createTheme({
   palette: {
@@ -35,6 +37,8 @@ function App() {
       <ThemeProvider theme={theme}>
         <ResponsiveAppBar />
         <br />
+        <BasicBreadcrumbs />
+        <br />
         <ContentCards />
         <br />
         <Button
@@ -45,6 +49,12 @@ function App() {
           Start
         </Button>
         <QuiltedImageList />
+        <Alert
+          severity="warning"
+          sx={{ width: "100%", display: "flex", justifyContent: "center" }}
+        >
+          For a better user experience MetaMask installation is recommended 😉
+        </Alert>
         <BottomBar />
       </ThemeProvider>
     </div>
